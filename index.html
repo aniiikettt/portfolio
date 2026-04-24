@@ -56,3 +56,16 @@ body {
   mix-blend-mode: screen;
   box-shadow: 0 0 12px var(--cyan), 0 0 24px var(--cyan);
 }
+#cursor-ring {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(99, 102, 241, 0.6);
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, border-color 0.3s;
+}
+body:hover #cursor-ring { border-color: var(--indigo-light); }
+a:hover ~ #cursor, button:hover ~ #cursor { transform: translate(-50%,-50%) scale(2); }
