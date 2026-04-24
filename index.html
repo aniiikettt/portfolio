@@ -83,3 +83,15 @@ a:hover ~ #cursor, button:hover ~ #cursor { transform: translate(-50%,-50%) scal
   gap: 28px;
   transition: opacity 0.7s ease, visibility 0.7s ease;
 }
+#loader.hidden { opacity: 0; visibility: hidden; }
+.loader-initials {
+  font-family: 'Syne', sans-serif;
+  font-size: 72px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--indigo-light), var(--pink), var(--cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -2px;
+  animation: pulse-scale 1.2s ease-in-out infinite;
+}
